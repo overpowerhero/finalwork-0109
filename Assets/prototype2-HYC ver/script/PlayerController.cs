@@ -8,12 +8,24 @@ public class PlayerController : MonoBehaviour
     public float speed = 30;
     public float horizontalInput;
     public float verticalInput;
+
+    //1/10 zixinma
+
+    public float jumpForce = 10;
+    public float gravityModifier = 5;
+    public bool isOnGround = true;
+    private Rigidbody playerRb;
+
     private int xRange = 20;
     public GameObject flyFood;
     // Start is called before the first frame update
     void Start()
     {
-        
+
+       playerRb = GetComponent<Rigidbody>();
+       Physics.gravity *= gravityModifier;
+
+        //1/10馬子馨
     }
 
     // Update is called once per frame
@@ -40,5 +52,17 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(flyFood, transform.position, flyFood.transform.rotation);
         }
+
+       if (Input.GetKeyDown(KeyCode.C) && isOnGround)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isOnGround = false;
+        }
     }
+
+   private void OnCollisionEnter(Collision collision)
+    {
+        isOnGround = true;
+    }
+    //問老師這邊跟第三張不同的地方是有無用標籤，他不會自動落下來碰到地板 已解決 現在是有機率掉到地板底下
 }

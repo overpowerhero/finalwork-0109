@@ -13,12 +13,20 @@ public class deletecollection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
-    }
+
+
+
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    // Destroy(gameObject);
+    //Destroy(other.gameObject);
+    //}   
+
+    //碰撞消除請老師打，人、地板撞到雞會消失
+
 }
+
