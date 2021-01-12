@@ -265,11 +265,15 @@ Light:
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_BoundingSphereOverride: {x: 0, y: 3568.6836, z: 4.5743e-41, w: 0}
 =======
   m_BoundingSphereOverride: {x: 0, y: 1.6311e-41, z: 0, w: -7.1304385e-10}
 >>>>>>> Stashed changes
+=======
+  m_BoundingSphereOverride: {x: 0, y: 8.8953833e+18, z: 4.591e-41, w: 0}
+>>>>>>> parent of ec0e850... 1/11 12.08
 =======
   m_BoundingSphereOverride: {x: 0, y: 8.8953833e+18, z: 4.591e-41, w: 0}
 >>>>>>> parent of ec0e850... 1/11 12.08
