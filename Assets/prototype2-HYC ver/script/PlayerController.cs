@@ -17,12 +17,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
 
     private int xRange = 20;
-
-    //1/11 zixinma
-    private int zRange = 60;
-    public float forwardInput;
-
-
     public GameObject flyFood;
     // Start is called before the first frame update
     void Start()
@@ -52,20 +46,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-
-        //1/11 zixinma (前面無法固定，但後面可以)
-
-        if (transform.position.z < -zRange) // 前
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
-        }
-
-        if (transform.position.z > zRange) // 後
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
-        }
-
-
         //需要再加後面?
         // Generate fly food
         if (Input.GetKeyDown(KeyCode.Space))
